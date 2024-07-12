@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billionaire Diary</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    
+</head>
+<body class="bg-gray-200">
+    <div class="min-h-screen flex flex-col lg:flex-row">
+        <!-- Hamburger Menu -->
+        
+
+        <!-- Sidebar -->
+        <div id="sidebar" class="w-full lg:w-1/4 bg-blue-900 text-white p-4 lg:block hidden">
+            <div class="mb-8">
+                <h1 class="text-2xl font-bold">BILLIONAIRE</h1>
+                <h2 class="text-lg">DIARY</h2>
+            </div>
+            <div class="space-y-4">
+                <button class="w-full py-2 bg-gray-200 text-black rounded-md">Add a user<br>(Randomly)</button>
+                <button class="w-full py-2 bg-gray-200 text-black rounded-md">Double Money</button>
+                <button class="w-full py-2 bg-gray-200 text-black rounded-md">Sort By Rank<br>(Descending)</button>
+                <button class="w-full py-2 bg-gray-200 text-black rounded-md">Calculate Entire Wealth</button>
+                <div class="h-0.5 bg-gray-300 my-4"></div>
+                <button class="w-full py-2 bg-gray-200 text-black rounded-md">Show All Billionaires</button>
+                <button class="w-full py-2 bg-gray-200 text-black rounded-md">Richest by industry<br>(Technology)</button>
+                <button class="w-full py-2 bg-gray-200 text-black rounded-md">Richest by states<br>(Texas)</button>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="flex-1 p-4 lg:p-8">
+            <!-- Search Bar -->
+            <div class="flex flex-col lg:flex-row justify-between items-center mb-8">
+                <input type="text" class="border-b-2 border-gray-400 py-2 px-4 w-full lg:max-w-md mb-4 lg:mb-0" placeholder="Search">
+                <img src="path/to/logo.png" alt="Logo" class="h-10">
+            </div>
+            <!-- Greeting -->
+            <h1 class="text-2xl font-bold mb-4">Hello, User!</h1>
+            <!-- Table -->
+            <div class="overflow-x-auto shadow-md">
+                <table class="min-w-full bg-white rounded-md">
+                    <thead>
+                        <tr class="bg-gray-300">
+                            <th class="py-2 px-4 text-left">Person</th>
+                            <th class="py-2 px-4 text-left">Citizenship</th>
+                            <th class="py-2 px-4 text-left">Industry</th>
+                            <th class="py-2 px-4 text-left">Rank</th>
+                            <th class="py-2 px-4 text-left">Wealth</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-b">
+                            <td class="py-2 px-4">Jeff Bezos</td>
+                            <td class="py-2 px-4">United States</td>
+                            <td class="py-2 px-4">Technology</td>
+                            <td class="py-2 px-4">3</td>
+                            <td class="py-2 px-4">$124317.31</td>
+                        </tr>
+                        <tr class="border-b">
+                            <td class="py-2 px-4">sergey-brin</td>
+                            <td class="py-2 px-4">United States</td>
+                            <td class="py-2 px-4">Technology</td>
+                            <td class="py-2 px-4">12</td>
+                            <td class="py-2 px-4">$80526.39</td>
+                        </tr>
+                        <tr class="border-b">
+                            <td class="py-2 px-4">Murat Vargi</td>
+                            <td class="py-2 px-4">Turkey</td>
+                            <td class="py-2 px-4">Telecom</td>
+                            <td class="py-2 px-4">2495</td>
+                            <td class="py-2 px-4">$1029.57</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr class="border-t">
+                            <td colspan="4" class="py-2 px-4 text-right font-bold">Total</td>
+                            <td class="py-2 px-4">$205873.27</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    
+</body>
+</html>
