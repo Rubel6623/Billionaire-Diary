@@ -20,20 +20,20 @@
     <div class="min-h-screen flex flex-col lg:flex-row">
         <!-- Hamburger Menu -->        
         <div class="lg:hidden p-4 flex justify-between items-center bg-blue-900 text-white">
-            <div>
+            <div class="hidden lg:block">
                 <h1 class="text-2xl font-bold">BILLIONAIRE</h1>
                 <h2 class="text-lg">DIARY</h2>
             </div>
-            <div class="flex">
+            <div class="flex justify-between w-full">
                 <button id="menu-button" class="hamburger ml-0">
                     <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
                     </svg>
                 </button>
-                <img src="../images/logo/logo1.png" alt="Logo" class="h-10 w-8 ml-2 pb-3 lg:hidden">
+                <img src="../images/logo/logo1.png" alt="Logo" class="h-10 w-8 pb-3 lg:hidden">
             </div>
         </div>
-        <!-- Sidebar -->
+        <!-- Sidebar lottifiles-->
         <div id="sidebar" class="w-full lg:w-1/4 bg-blue-900 text-white p-4 lg:block hidden">
             <div id="title" class="mb-8">
                 <h1 class="text-2xl font-bold">BILLIONAIRE</h1>
@@ -45,7 +45,7 @@
                 <button class="w-full py-2 bg-gray-200 text-black rounded-md">Sort By Rank<br>(Descending)</button>
                 <button class="w-full py-2 bg-gray-200 text-black rounded-md">Calculate Entire Wealth</button>
                 <div class="h-0.5 bg-gray-300 my-4"></div>
-                <button class="w-full py-2 bg-gray-200 text-black rounded-md">Show All Billionaires</button>
+                <button id="all-person" class="w-full py-2 bg-gray-200 text-black rounded-md">Show All Billionaires</button>
                 <button class="w-full py-2 bg-gray-200 text-black rounded-md">Richest by industry<br>(Technology)</button>
                 <button class="w-full py-2 bg-gray-200 text-black rounded-md">Richest by states<br>(Texas)</button>
             </div>
@@ -60,6 +60,9 @@
             </div>
             <!-- Greeting -->
             <h1 class="text-2xl font-bold mb-4">Hello, User!</h1>
+            <div id="person-container">
+                
+            </div>
             <!-- Table -->
             <div class="overflow-x-auto shadow-md">
                 <table class="min-w-full bg-white rounded-md">
