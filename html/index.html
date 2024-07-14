@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Billionaire Diary</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <style>
         .hamburger {
             display: none;
@@ -40,12 +41,12 @@
                 <h2 class="text-lg">DIARY</h2>
             </div>
             <div class="space-y-4">
-                <button class="w-full py-2 bg-gray-200 text-black rounded-md">Add a user<br>(Randomly)</button>
+                <button id="all-person" class="w-full py-2 bg-gray-200 text-black rounded-md">Show All Billionaires</button>
                 <button class="w-full py-2 bg-gray-200 text-black rounded-md">Double Money</button>
                 <button class="w-full py-2 bg-gray-200 text-black rounded-md">Sort By Rank<br>(Descending)</button>
                 <button class="w-full py-2 bg-gray-200 text-black rounded-md">Calculate Entire Wealth</button>
                 <div class="h-0.5 bg-gray-300 my-4"></div>
-                <button id="all-person" class="w-full py-2 bg-gray-200 text-black rounded-md">Show All Billionaires</button>
+                <button class="w-full py-2 bg-gray-200 text-black rounded-md">Add a user<br>(Randomly)</button>
                 <button class="w-full py-2 bg-gray-200 text-black rounded-md">Richest by industry<br>(Technology)</button>
                 <button class="w-full py-2 bg-gray-200 text-black rounded-md">Richest by states<br>(Texas)</button>
             </div>
@@ -59,12 +60,12 @@
                 <img src="../images/logo/logo1.png" alt="Logo" class="h-10 pb-2 hidden lg:block">
             </div>
             <!-- Greeting -->
-            <h1 class="text-2xl font-bold mb-4">Hello, User!</h1>
-            <div id="person-container">
+            <h1 class="text-2xl font-bold mb-4">Hello, BILLIONAIRE!</h1>
+            <div id="person-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 
             </div>
             <!-- Table -->
-            <div class="overflow-x-auto shadow-md">
+            <div id="table" class="overflow-x-auto shadow-md">
                 <table class="min-w-full bg-white rounded-md">
                     <thead>
                         <tr class="bg-gray-300">
@@ -109,5 +110,6 @@
         </div>
     </div>
     <script src="../js/bllionaire.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
 </body>
 </html>
