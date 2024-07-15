@@ -1,6 +1,5 @@
 document.getElementById('menu-button').addEventListener('click', function () {
   const sidebar = document.getElementById('sidebar');
-  const title = document.getElementById('title');
   if (sidebar.classList.contains('hidden')) {
     sidebar.classList.remove('hidden');
   } else {
@@ -13,6 +12,7 @@ const loadPerson = async () => {
     const res = await fetch('https://forbes400.onrender.com/api/forbes400?limit=10');
     const data = await res.json();
     displayPerson(data);
+    calculateWealth(data);
   }
   catch (err) {
     console.log(err);
@@ -39,8 +39,9 @@ const displayPerson = (person) => {
         <img class="h-full w-full img-fluid" src="${person.squareImage}" alt="Movie" />
       </figure>
       <div class="card-body">
-        <h2 class="card-title">New movie is released!</h2>
-        <p>Click the button to watch on Jetflix app.</p>
+        <h2 class="card-title">${person.personName}</h2>
+        <p>Rank : ${person.rank}</p>
+        <p>Source : ${person.source}</p>
         <div class="card-actions justify-end">
           <button class="btn btn-primary">Details</button>
         </div>
@@ -48,4 +49,15 @@ const displayPerson = (person) => {
     </div>`;
     personContainer.appendChild(div);
   })
+}
+
+document.getElementById('calculate-wealth').addEventListener('click', function () {
+  console.log('clicked');
+  loadPerson();
+  const personContainer=document.getElementById('person-container');
+  personContainer.classList.add('hidden');
+})
+
+const calculateWealth=(person)=>{
+  console.log(person);
 }
